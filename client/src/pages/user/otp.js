@@ -50,7 +50,7 @@ userRequest({
   
 }).catch((error)=>{
     dispatch(hideLoading())
-      toast.error("something went wrong")
+      toast.error("500 Internal server issue")
 })
 
 

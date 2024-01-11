@@ -68,7 +68,7 @@ function Login() {
         
      }).catch((error)=>{
         dispatch(hideLoading())
-            toast.error("Something went wrong")
+            toast.error("500 Internal server issue")
      })
         }
     return (

@@ -58,7 +58,7 @@ const handleSubmit = async (e) => {
 
     }).catch((error)=>{
                  dispatch(hideLoading())
-         toast.error("Something went wrong")
+         toast.error("500 Internal server issue")
   
     })
 

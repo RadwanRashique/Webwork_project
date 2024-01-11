@@ -61,7 +61,7 @@ function ForgotPasswordOTPPage() {
       console.log(error)
       dispatch(hideLoading())
 
-      toast.error("something went wrong")
+      toast.error("500 Internal server issue")
     })
   }
 

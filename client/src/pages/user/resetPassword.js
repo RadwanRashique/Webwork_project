@@ -72,7 +72,7 @@ function ResetPasswordPage() {
           toast.error(response.data.message)
         }
       }).catch((error) => {
-        console.log(error, "at userResetPassword")
+        console.log(error, "500 Internal server issue")
       })
     }
   }

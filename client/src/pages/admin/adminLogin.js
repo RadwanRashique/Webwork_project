@@ -72,9 +72,9 @@ function LoginPage() {
                     toast.error(response.data.message)
                 }
           }).catch((error)=>{
-                    console.log(error, "adminoo")
+                    
                 dispatch(hideLoading())
-                toast.error(error.response.data.message)
+                toast.error("500 Internal server issue")
           })
     }
 
