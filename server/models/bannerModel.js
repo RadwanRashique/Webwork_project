@@ -6,7 +6,8 @@ const bannerSchema = new mongoose.Schema(
             type: String
         },
         image: {
-            type: String
+            type: String,
+            default: path.join(__dirname, 'defaultimage', 'bannerdefault_image.png')
 
         },
         description: {
