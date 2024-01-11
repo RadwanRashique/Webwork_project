@@ -53,7 +53,7 @@ const LandingPage = () => {
         <div className="text-white text-center">
           <h1 className="text-5xl font-semibold mb-4">Welcome to WebWork</h1>
           <h2 className="text-5xl font-semibold mb-4">
-            The complete solution for your Webwork
+            The complete solution for your webwork
           </h2>
           <p className="text-lg mb-8">
             Connect with top talent or Find your web development work.
@@ -78,7 +78,7 @@ const LandingPage = () => {
       {/* Second Half (50% height with banners) */}
 
 
-
+{/* 
       {bannerData.map((banner, index) => (
 
 
@@ -86,19 +86,13 @@ const LandingPage = () => {
           
           <div className="relative bg-white " key={index} style={{ display: index === currentBannerIndex ? 'block' : 'none' }}>
 
-{banner?.image ? (
-              <img
-                src={banner?.image}
-                className="w-full max-h-96"
-                alt={`bannerData ${index}`}
-              />
-            ) : (
-              <img
-                src='https://imgeng.jagran.com/images/2023/aug/img1690877604653.jpg'
-                className="w-full max-h-96"
-                alt={`Default Image ${index}`}
-              />
-            )}
+            <img
+            
+              src={banner?.image}
+            
+              className="w-full max-h-96"
+              alt={`bannerData ${index}`}
+            />
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <h1 className="text-center text-2xl  font-serif  font-bold leading-9 text-black lg:text-4xl md:text-2xl mt-8 px-2">
                 {(banner?.title).toUpperCase()}
@@ -110,8 +104,25 @@ const LandingPage = () => {
             </div>
           </div>
 
-        ) : null
-      ))}
+        ) : */}
+        
+        
+        
+        <div className="relative bg-red ">
+          <img   className="w-full max-h-96" src='https://solguruz.com/wp-content/uploads/2023/11/What-to-Look-for-When-Hiring-a-Flutter-Developer-10-Key-Traits.png' alt='img' />
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <h1 className="text-center text-2xl  font-serif  font-bold leading-9 text-black lg:text-4xl md:text-2xl mt-8 px-2">
+              LARGEST FREELANCE
+              </h1>
+              <p className=" bg-black  text-base text-lg font-sans font-bold leading-none text-white text-black px-2 py-2  mt-3">
+             
+The Worlds Largest Freelancer Finding Site
+              </p>
+
+            </div>
+
+        </div>
+      {/* // ))} */}
 
 
 
