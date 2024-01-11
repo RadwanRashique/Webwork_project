@@ -53,7 +53,7 @@ const LandingPage = () => {
         <div className="text-white text-center">
           <h1 className="text-5xl font-semibold mb-4">Welcome to WebWork</h1>
           <h2 className="text-5xl font-semibold mb-4">
-            The complete solution For your webwork
+            The complete solution for your Webwork
           </h2>
           <p className="text-lg mb-8">
             Connect with top talent or Find your web development work.
