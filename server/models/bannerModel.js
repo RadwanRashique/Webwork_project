@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const path = require('path');
+
 const bannerSchema = new mongoose.Schema(
 
     {
@@ -8,7 +8,7 @@ const bannerSchema = new mongoose.Schema(
         },
         image: {
             type: String,
-            default: path.join(__dirname, 'defaultImage', 'bannerdefault_image.png')
+            default: 'https://imgeng.jagran.com/images/2023/aug/img1690877604653.jpg'
 
         },
         description: {
