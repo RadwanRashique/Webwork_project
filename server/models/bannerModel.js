@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const path = require('path');
 const bannerSchema = new mongoose.Schema(
 
     {
