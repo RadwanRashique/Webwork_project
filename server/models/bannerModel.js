@@ -8,7 +8,7 @@ const bannerSchema = new mongoose.Schema(
         },
         image: {
             type: String,
-            default: 'https://imgeng.jagran.com/images/2023/aug/img1690877604653.jpg'
+            
 
         },
         description: {

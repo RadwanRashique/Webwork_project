@@ -94,7 +94,7 @@ const LandingPage = () => {
               />
             ) : (
               <img
-                src={defaultImageUrl}
+                src='https://imgeng.jagran.com/images/2023/aug/img1690877604653.jpg'
                 className="w-full max-h-96"
                 alt={`Default Image ${index}`}
               />
