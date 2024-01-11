@@ -17,9 +17,9 @@ const cloudinary = require("cloudinary").v2;
 // import {v2 as cloudinary} from 'cloudinary';
 
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  cloud_name: process.env.cloudinaryname,
+  api_key: process.env.cloudinaryapikey,
+  api_secret: process.env.cloudinaryapisecret,
   secure: true,
 });
 
@@ -49,7 +49,7 @@ const adminLogin = async (req, res) => {
             .send({ message: "please check your password", success: false });
         } else {
          
-          const admintoken = jwt.sign({ id: user._id ,role:"Admin"}, process.env.JWT_SECRET, {
+          const admintoken = jwt.sign({ id: user._id ,role:"Admin"}, process.env.jwtsecret, {
             expiresIn: "1d",
           });
 

@@ -23,9 +23,9 @@ const cloudinary = require("cloudinary").v2;
 // import {v2 as cloudinary} from 'cloudinary';
 
 cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
+    cloud_name: process.env.cloudinaryname,
+    api_key: process.env.cloudinaryapikey,
+    api_secret: process.env.cloudinaryapisecret,
     secure: true,
 });
 const developerDetailsModel = require('../models/developerDetailsModel')
@@ -240,7 +240,7 @@ const verifyLogin = async (req, res) => {
 
                 }
                 else {
-                    const token = jwt.sign({ id: user._id,role: "USER" }, process.env.JWT_SECRET, { expiresIn: "1d" })
+                    const token = jwt.sign({ id: user._id,role: "USER" }, process.env.jwtsecret, { expiresIn: "1d" })
                     res.status(200).send({ message: "Login successful", success: true, data: token })
                 }
             }
