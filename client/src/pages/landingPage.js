@@ -86,13 +86,19 @@ const LandingPage = () => {
           
           <div className="relative bg-white " key={index} style={{ display: index === currentBannerIndex ? 'block' : 'none' }}>
 
-            <img
-            
-              src={banner?.image}
-            
-              className="w-full max-h-96"
-              alt={`bannerData ${index}`}
-            />
+{banner?.image ? (
+              <img
+                src={banner?.image}
+                className="w-full max-h-96"
+                alt={`bannerData ${index}`}
+              />
+            ) : (
+              <img
+                src={defaultImageUrl}
+                className="w-full max-h-96"
+                alt={`Default Image ${index}`}
+              />
+            )}
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <h1 className="text-center text-2xl  font-serif  font-bold leading-9 text-black lg:text-4xl md:text-2xl mt-8 px-2">
                 {(banner?.title).toUpperCase()}
