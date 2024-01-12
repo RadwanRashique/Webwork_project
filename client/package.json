@@ -10,6 +10,7 @@
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
     "lottie-web": "^5.12.2",
+    "nodemodule": "^0.3.0",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-chartjs-2": "^5.2.0",
@@ -31,6 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+   
   },
   "browserslist": {
     "production": [
@@ -47,7 +49,6 @@
   "devDependencies": {
     "tailwindcss": "^3.3.3"
   },
-  "proxy": "http://localhost:5000",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "tailwind.config.js",
   "author": "",

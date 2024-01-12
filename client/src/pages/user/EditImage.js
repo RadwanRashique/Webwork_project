@@ -13,10 +13,12 @@ const EditImage = () => {
   const navigate = useNavigate();
   const location = useLocation()
   const data = location.state
+  
   const [profileImage, setProfileImage] = useState();
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      
 
       setProfileImage(file);
     }
@@ -29,55 +31,63 @@ const EditImage = () => {
   const handleImageSave = async (e) => {
     e.preventDefault();
 
-    if (!profileImage) {
-      // If no new image is selected, send the existing image URL
-      const existingImageURL = data.image;
-      if (existingImageURL) {
+    if(!profileImage){
 
-        dispatch(showLoading());
-      if (existingImageURL) {
-        userRequest({
-          url: apiEndPoints.updateImage,
-          method: 'post',
-          data: { image: existingImageURL },
+   return   toast.error("Didn't selected")
+    }
 
+    // if (!profileImage) {
+    //   // If no new image is selected, send the existing image URL
+    //   const existingImageURL = data.image;
+    //   if (existingImageURL) {
 
-        }).then((response) => {
-          dispatch(hideLoading());
-
-
-
-          if (response.data.success) {
-            toast.success(response.data.message);
-            navigate(serverVariables.Profile);
-          } else {
-            toast.error(response.data.message);
-          }
-
-        }).catch((error) => {
-          console.log(error, 'imageupdate');
-          dispatch(hideLoading());
-          toast.error('Sorry, there was an error while saving the image.');
-        }
+    //     dispatch(showLoading());
+    //   if (existingImageURL) {
+    //     userRequest({
+    //       url: apiEndPoints.updateImage,
+    //       method: 'post',
+    //       data: { image: existingImageURL },
 
 
-        )}
-      }
-        else {
-              toast.error('No image selected or available to save.');
-            }
-          }
+    //     }).then((response) => {
+    //       dispatch(hideLoading());
+
+
+
+    //       if (response.data.success) {
+    //         toast.success(response.data.message);
+    //         navigate(serverVariables.Profile);
+    //       } else {
+    //         toast.error(response.data.message);
+    //       }
+
+    //     }).catch((error) => {
+    //       console.log(error, 'imageupdate');
+    //       dispatch(hideLoading());
+    //       toast.error('Sorry, there was an error while saving the image.');
+    //     }
+
+
+    //     )}
+    //   }
+    //     else {
+    //           toast.error('No image selected or available to save.');
+    //         }
+    //       }
         
-    else {
+     
      
 
 
  // New image is selected, proceed with the upload
       dispatch(showLoading());
+
+      const formdata= new FormData()
+      formdata.append("image",profileImage)
       userRequest({
         url:apiEndPoints.updateImage,
         method:'post',
-        data:{ image: existingImageURL },
+        data:formdata,
   
   
       }).then((response)=>{
@@ -98,7 +108,7 @@ const EditImage = () => {
       })
 
 
-    }
+    
   
 }
 
